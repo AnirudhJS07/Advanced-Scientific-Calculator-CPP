@@ -3,15 +3,10 @@
 using namespace std;
 int fact(int x)
 {
-	int m=1;
-	for(int i=1;i<=x;i++)
-	{
-		if(x==0)
-		return 1;
-		else
-		m=m*i;
-	}
-	return m;
+    if(x==0)
+    return 1;
+    else
+    return fact(x-1);
 }
 void fib(int n)
 {
@@ -39,7 +34,7 @@ int main()
 		switch(a)
 		{
 			case(1):
-			cout<<"please select the function\n1. Addition\n2. Subtraction\n3. Division\n4. Multiplication\n";
+			cout<<"Please select the function\n1. Addition\n2. Subtraction\n3. Division\n4. Multiplication\n";
 			cin>>operation;
 			if(operation==1)
 			{
@@ -83,7 +78,7 @@ int main()
 			cin>>b;
 			if(b==1)
 			{
-				cout<<"Please select the function\n1. Sine\n2. Cosine\n3. Tangent\n4. Cotangent\n5. Secant\n6. Cosecent\n";
+				cout<<"Please select the function\n1. Sine\n2. Cosine\n3. Tangent\n4. Cotangent\n5. Secant\n6. Cosecant\n";
 				cin>>operation;
 				if(operation==1)
 				{
@@ -224,7 +219,7 @@ int main()
 			else if (operation==6)
 			{
 				long double x,y;
-				cout<<"Enter the number to calculate suare root\n";
+				cout<<"Enter the number to calculate square root\n";
 				cin>>x;
 				y=sqrt(x);
 				cout<<"The square root of the entered number is "<<y<<endl;
@@ -257,15 +252,15 @@ int main()
 				{
 					int x;
 					cout<<"Choose the quantity you want to change\n";
-					cout<<"1. Distance\n2. Mass\n3. time\n";
+					cout<<"1. Distance\n2. Mass\n3. Time\n";
 					cin>>x;
 					if(x==1)
 					{
 						long double c,d;
-						cout<<"Enter the distance in metres\n";
+						cout<<"Enter the distance in meters\n";
 						cin>>c;
 						d=100*c;
-						cout<<"The distance in centimetres is "<<d<<endl;
+						cout<<"The distance in centimeters is "<<d<<endl;
 					}
 					else if(x==2)
 					{
@@ -292,15 +287,15 @@ int main()
 				{
 					int x;
 					cout<<"Choose the quantity you want to change\n";
-					cout<<"1. Distance\n2. Mass\n3. time\n";
+					cout<<"1. Distance\n2. Mass\n3. Time\n";
 					cin>>x;
 					if(x==1)
 					{
 						long double c,d;
-						cout<<"Enter the distance in centimetres\n";
+						cout<<"Enter the distance in centimeters\n";
 						cin>>c;
 						d=c/100;
-						cout<<"The distance in metres is "<<d<<endl;
+						cout<<"The distance in meters is "<<d<<endl;
 					}
 					else if(x==2)
 					{
@@ -406,7 +401,7 @@ int main()
 					break;
 					case(6):
 					cout<<"Please select the function\n";
-					cout<<"1. Taylor's series for exponential fumction\n2. Fibonacci series calculator\n3. Permutations and combination\n4. Impedance calculator\n5. Phase angle calculator\n";
+					cout<<"1. Taylor's series for exponential function\n2. Fibonacci series calculator\n3. Permutations and combination\n4. Impedance calculator\n5. Phase angle calculator\n";
 					cin>>operation;
 					if(operation==1)
 					{
