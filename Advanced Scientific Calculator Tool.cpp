@@ -3,10 +3,15 @@
 using namespace std;
 int fact(int x)
 {
-    if(x==0)
-    return 1;
-    else
-    return fact(x-1);
+	int m=1;
+	for(int i=1;i<=x;i++)
+	{
+		if(x==0)
+		return 1; 
+		else 
+		m=m*i;
+	}
+	return m;
 }
 void fib(int n)
 {
